@@ -8,3 +8,12 @@ class TestBasics(unittest.TestCase):
 	def test_subtract(self):
 		result = rpn.calculate('5 3 -')
 		self.assertEqual(2, result)
+	def test_mult(self):
+		result = rpn.calculate('5 5 *')
+		self.assertEqual(25, result)
+	def test_div(self):
+		result = rpn.calculate('5 5 /')
+		self.assertEqual(1, result)
+	def test_pow(self):
+		result = rpn.calculate('5 2 ^')
+		self.assertEqual(25, result)
